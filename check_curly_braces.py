@@ -20,3 +20,12 @@ def check_curlies_stack(s):
                 return False
     return len(stack) == 0 # If stack is empty, curlies check passes.
 
+def check_curlies_counter(s):
+    "Check if all curly braces are paired."
+    counter = 0
+    for l in s:
+        if l == "{":
+            counter += 1
+        elif l == "}":
+            counter -= 1
+    return counter == 0
