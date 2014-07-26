@@ -18,7 +18,7 @@ def check_curlies_stack(s):
                 stack.pop()
             except IndexError:
                 return False
-    return len(stack) == 0 # If stack is empty, curlies check passes.
+    return len(stack) == 0 # If stack is empty, curlies matching check passes.
 
 def check_curlies_counter(s):
     "Check if all curly braces are paired."
@@ -28,4 +28,4 @@ def check_curlies_counter(s):
             counter += 1
         elif l == "}":
             counter -= 1
-    return counter == 0
+    return counter == 0 # If counter is zero, curlies matching check passes.
