@@ -12,7 +12,8 @@ class TestPrimeChecker(unittest.TestCase):
     def test_method_to_known_values(self):
         """Method should return the same boolean values as test cases"""
         for (n, expected_boolean) in self.examples:              
-            actual_boolean = prime_number_checker.is_prime(n)                 
+            actual_boolean = prime_number_checker.is_prime(n)       
+            print expected_boolean, actual_boolean          
             self.assertEqual(expected_boolean, actual_boolean)   
 
 if __name__ == '__main__':
