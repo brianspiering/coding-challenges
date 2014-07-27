@@ -3,9 +3,9 @@ import unittest
 
 class TestCurlyBraceCheckers(unittest.TestCase):
     
-    examples_false = (("}", False), ("{", False), ("{}}", False))
+    examples_false = [("}", False), ("{", False), ("{}}", False)]
     
-    examples_true = (("", True), ("{}", True), ("{{}{}}", True))
+    examples_true = [("", True), ("{}", True), ("{{}{}}", True)]
 
     examples = examples_false + examples_true
 
