@@ -2,5 +2,15 @@
 """
 
 def fizzbuzz(n):
-    ""
-    return None
+    message = ""
+    if n % 3 == 0:
+        message += "Fizz"
+    if n % 5 == 0:
+        message += "Buzz"
+    if not message:
+        message = n
+    return message
+
+if __name__ == "__main__":
+    limit = 100
+    print [fizzbuzz(n) for n in xrange(1,limit+1)]
