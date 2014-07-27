@@ -1,4 +1,5 @@
 import curly_braces_checker
+import curly_braces_checker
 import unittest
 
 class TestCurlyBraceCheckers(unittest.TestCase):
