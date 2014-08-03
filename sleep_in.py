@@ -12,9 +12,13 @@ source - http://codingbat.com/prob/p173401
 """
 
 def sleep_in(weekday, vacation):
-      return None
+    if not weekday or vacation:
+        return True
+    else:
+        return False
 
 if __name__ == "__main__":
-    weekday = True
-    vacation = True
-    sleep_in(weekday, vacation) 
+    weekday = False
+    vacation = False
+    print("Today is a weekday: {0} and we're on vacation: {1} so we can sleep in? {2}."
+        .format(weekday, vacation, sleep_in(weekday, vacation)))

@@ -4,7 +4,7 @@ import unittest
 class TestSleepIn(unittest.TestCase):
     
     # [(input_1, input_2), answer]
-    test_cases= [((False, False), False),
+    test_cases= [((False, False), True),
                 ((True, False), False),
                 ((False, True), True),
                 ((True, True), True)]
