@@ -8,7 +8,7 @@ sleep_in(False, False) → True
 sleep_in(True, False) → False
 sleep_in(False, True) → True
 
-source - http://codingbat.com/prob/p173401
+Source: http://codingbat.com/prob/p173401
 """
 
 def sleep_in(weekday, vacation):
