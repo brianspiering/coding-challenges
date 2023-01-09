@@ -1,26 +1,25 @@
-""" Write a program that does a binary search of a sorted array.
+"""Write a program that performs a binary search of a sorted array.
 """
-from __future__ import division
 
-def binary_search(needle, sorted_list):
+def binary_search(target, items):
     "Return true if needle is in sorted_list, else return false."
-
-    if sorted_list != sorted(sorted_list): # Make sure list is sorted
-        sorted_list = sorted(sorted_list)
-
-    left, right = 0, len(sorted_list)-1
-    while left < right:
-        midpoint = (left+right)//2
-        if needle == sorted_list[midpoint]:
+    lower, upper = 0, len(items) - 1
+   
+    while lower <= upper:
+        middle = lower + (upper-lower) // 2
+        if items[middle] == target:
             return True
-        elif needle < sorted_list[midpoint]:
-            right = midpoint-1
+        elif items[middle] < target:
+            lower = middle + 1
         else:
-            left = midpoint+1
-    return False # Needle in sorted array
+            upper = middle - 1
+    return False
 
 if __name__ == "__main__":
-    sorted_list = xrange(11)
-    needle = 7
-    print("The number {0} is in {1}: {2}".
-        format(needle, sorted_list, binary_search(needle, sorted_list)))
+    items = range(11)
+    target = 1
+    print(f"The number {target} is in {items}: {binary_search(target, items)}")
+
+    items = range(11)
+    target = 12
+    print(f"The number {target} is in {items}: {binary_search(target, items)}")
